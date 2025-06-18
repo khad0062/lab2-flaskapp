@@ -1,0 +1,40 @@
+2025-06-18 01:11:31,423 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.15:5000
+2025-06-18 01:11:31,424 INFO [33mPress CTRL+C to quit[0m
+2025-06-18 01:13:26,882 INFO 127.0.0.1 - - [18/Jun/2025 01:13:26] "[33mGET / HTTP/1.1[0m" 404 -
+2025-06-18 01:13:27,240 INFO 127.0.0.1 - - [18/Jun/2025 01:13:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-18 01:13:30,087 INFO 127.0.0.1 - - [18/Jun/2025 01:13:30] "[33mGET / HTTP/1.1[0m" 404 -
+2025-06-18 01:37:57,617 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.15:5000
+2025-06-18 01:37:57,617 INFO [33mPress CTRL+C to quit[0m
+2025-06-18 01:38:01,016 INFO 127.0.0.1 - - [18/Jun/2025 01:38:01] "[33mGET / HTTP/1.1[0m" 404 -
+2025-06-18 01:38:03,041 INFO 127.0.0.1 - - [18/Jun/2025 01:38:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-18 01:38:08,632 INFO 127.0.0.1 - - [18/Jun/2025 01:38:08] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+2025-06-18 01:38:42,077 INFO 192.168.18.15 - - [18/Jun/2025 01:38:42] "[33mGET / HTTP/1.1[0m" 404 -
+2025-06-18 01:38:42,642 INFO 192.168.18.15 - - [18/Jun/2025 01:38:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-06-18 01:41:05,696 ERROR 127.0.0.1 - - [18/Jun/2025 01:41:05] code 400, message Bad request version ('À\x13À')
+2025-06-18 01:41:05,697 INFO 127.0.0.1 - - [18/Jun/2025 01:41:05] "[31m[1m\x16\x03\x01\x00á\x01\x00\x00Ý\x03\x03 y­:Ie\x1cûñD\x87J<»÷íØ|\x01.\x07v\x84yz­èVe\x10Ü% º\x1a\x19\x8c)£\x19¦\x90'\x80êx(\x83\x10\x1e\\9Ae\x1dë8q©¹±r5*\x9b\x00$\x13\x01\x13\x02\x13\x03À/À+À0À,À'Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-06-18 01:41:21,382 WARNING FAILED LOGIN: user=admin ip=127.0.0.1
+2025-06-18 01:41:21,383 INFO 127.0.0.1 - - [18/Jun/2025 01:41:21] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-06-18 01:43:36,173 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.15:5000
+2025-06-18 01:43:36,173 INFO [33mPress CTRL+C to quit[0m
+2025-06-18 01:43:51,460 INFO 192.168.18.15 - - [18/Jun/2025 01:43:51] "[33mGET / HTTP/1.1[0m" 404 -
+2025-06-18 01:44:10,406 WARNING FAILED LOGIN: user=admin ip=127.0.0.1
+2025-06-18 01:44:10,407 INFO 127.0.0.1 - - [18/Jun/2025 01:44:10] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-06-18 01:44:12,047 WARNING FAILED LOGIN: user=admin ip=127.0.0.1
+2025-06-18 01:44:12,047 INFO 127.0.0.1 - - [18/Jun/2025 01:44:12] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-06-18 01:44:12,841 WARNING FAILED LOGIN: user=admin ip=127.0.0.1
+2025-06-18 01:44:12,842 INFO 127.0.0.1 - - [18/Jun/2025 01:44:12] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-06-18 01:44:13,563 WARNING FAILED LOGIN: user=admin ip=127.0.0.1
+2025-06-18 01:44:13,563 INFO 127.0.0.1 - - [18/Jun/2025 01:44:13] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-06-18 01:44:14,292 WARNING FAILED LOGIN: user=admin ip=127.0.0.1
+2025-06-18 01:44:14,292 INFO 127.0.0.1 - - [18/Jun/2025 01:44:14] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-06-18 01:44:32,814 INFO SUCCESSFUL LOGIN: user=admin ip=127.0.0.1
+2025-06-18 01:44:32,814 INFO 127.0.0.1 - - [18/Jun/2025 01:44:32] "POST /login HTTP/1.1" 200 -
