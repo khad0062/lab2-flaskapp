@@ -1,0 +1,17 @@
+### Failed login attempt
+POST https://flaskweb-bycfcygzaaesgefs.canadacentral-01.azurewebsites.net//login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "wrongpassword"
+}
+
+### Successful login attempt
+POST https://flaskweb-bycfcygzaaesgefs.canadacentral-01.azurewebsites.net/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password123"
+}
