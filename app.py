@@ -7,9 +7,10 @@ app = Flask(__name__)
 
 # Configure logging
 logging.basicConfig(
-    filename="login_attempts.log",
     level=logging.INFO,
-    format="%(asctime)s %(levelname)s %(message)s"
+    format="%(asctime)s %(levelname)s %(message)s",
+    handlers=[
+        logging.StreamHandler(sys.stdout)
 )
 
 # Example hardcoded credentials
