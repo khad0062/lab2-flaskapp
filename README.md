@@ -39,17 +39,29 @@ During this lab, I learned how to:
 
 ```kql
 AppServiceConsoleLogs
-| where LogLevel == "Warning"
-| where Message has "FAILED LOGIN"
-| project TimeGenerated, Message, _ResourceId
+| where TimeGenerated > ago(5m)
+| where ResultDescription has "FAILED LOGIN"
+| project TimeGenerated, Level, ResultDescription
+| order by TimeGenerated desc
 
 ```
 Explanation:
 
-- AppServiceConsoleLogs: Table containing console log entries from the Azure Web App.
+AppServiceConsoleLogs:
+This is the Azure Log Analytics table that stores your web app’s console logs, including custom log messages from your Flask app.
 
-- where LogLevel == "Warning": Only select warnings, which are used for failed login attempts.
+| where TimeGenerated > ago(5m):
+Limits the results to logs generated in the last 5 minutes, making the query suitable for real-time brute-force detection.
 
-- where Message has "FAILED LOGIN": Filter messages indicating failed logins (as logged by the Flask app).
+| where ResultDescription has "FAILED LOGIN":
+Filters to only those log entries that contain your custom "FAILED LOGIN" string, which is written by your Flask app on each failed login attempt.
 
-- project ...: Show relevant fields (timestamp, message, resource ID).
+| project TimeGenerated, Level, ResultDescription:
+Selects and displays only the timestamp, log level, and log message content for easy analysis.
+
+| order by TimeGenerated desc:
+Sorts results from newest to oldest, so the latest failed attempts are shown first
+
+
+## Youtube Video demo
+[Youtube Video Link](https://youtu.be/axWUhMIp6v0)
