@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates how to deploy a simple Flask login application to Azure Web App, enable diagnostic logging to Azure Log Analytics, detect brute-force login attempts using KQL (Kusto Query Language), and configure automated alerts in Azure Monitor.
+This lab demonstrates how to deploy a simple Flask login application to Azure Web App, enable diagnostic logging to Azure Log Analytics, detect brute-force login attempts using KQL (Kusto Query Language), and configure automated alerts in Azure Monitor.
 
 ---
 
@@ -21,7 +21,6 @@ During this lab, I learned how to:
 - **Log Collection Consistency:** Ensuring that log messages from Flask (using Python logging) were actually captured in the correct Azure tables. Sometimes, logs appear in `AppServiceAppLogs` instead of `AppServiceConsoleLogs`.
 - **KQL Query Tuning:** Adjusting the KQL query to match the exact message format and table in which the logs were stored.
 - **Alert Thresholds:** Deciding on realistic thresholds (number of failed attempts and time window) to avoid false positives.
-- **Azure Diagnostic Settings UI:** Navigating and understanding all options for routing logs to Log Analytics.
 
 ---
 
