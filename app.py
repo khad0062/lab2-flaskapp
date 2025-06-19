@@ -11,10 +11,20 @@ logging.basicConfig(level=logging.INFO)
 VALID_USERNAME = "admin"
 VALID_PASSWORD = "password123"
 
+@app.route('/')
+def home():
+    return "Welcome to the Flask app! Use the /login endpoint to authenticate.", 200
+
 @app.route('/login', methods=['POST'])
 def login():
-    username = request.form['username']
-    password = request.form['password']
+    # Accept both form and JSON data
+    if request.is_json:
+        data = request.get_json()
+        username = data.get('username')
+        password = data.get('password')
+    else:
+        username = request.form.get('username')
+        password = request.form.get('password')
     ip = request.remote_addr
 
     if username == VALID_USERNAME and password == VALID_PASSWORD:
@@ -25,4 +35,4 @@ def login():
         return jsonify({"message": "Login failed!"}), 401
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=8000)
