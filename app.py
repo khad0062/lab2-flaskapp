@@ -5,13 +5,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s %(levelname)s %(message)s",
-    handlers=[
-        logging.StreamHandler(sys.stdout)
-)
+logging.basicConfig(level=logging.INFO)
 
 # Example hardcoded credentials
 VALID_USERNAME = "admin"
@@ -19,9 +13,8 @@ VALID_PASSWORD = "password123"
 
 @app.route('/login', methods=['POST'])
 def login():
-    data = request.json
-    username = data.get("username")
-    password = data.get("password")
+    username = request.form['username']
+    password = request.form['password']
     ip = request.remote_addr
 
     if username == VALID_USERNAME and password == VALID_PASSWORD:
